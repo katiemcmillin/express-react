@@ -8,7 +8,7 @@ const [user, setUser] = useState(null)
   return (
     <div className="App">
       <Header />
-      <Main setUser={setUser}/>
+      <Main setUser={setUser} user={user}/>
     </div>
   );
 }

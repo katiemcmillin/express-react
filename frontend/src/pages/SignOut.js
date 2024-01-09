@@ -4,12 +4,14 @@ import { logOut } from '../util/session'
 
 
 const SignOut = (props) => {
-  const { setUser } = props
+  const { setUser, user } = props
   const navigate = useNavigate()
 
   useEffect(() => {
     const signOutUser = async () => {
-      await logOut()
+      const response = await logOut();
+      const data = await response.json();
+      console.log(data)
       setUser(null)
       navigate('/')
     }

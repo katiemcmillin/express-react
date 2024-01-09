@@ -22,7 +22,12 @@ const { applyDefaults } = require("./models/People");
 ///////////////////////////////
 // MiddleWare
 ////////////////////////////////
-app.use(cors()); // to prevent cors errors, open access to all origins
+const corsOptions = {
+    origin: 'http://localhost:3000',
+    credentials: true
+  }
+
+app.use(cors(corsOptions)); // to prevent cors errors, open access to all origins
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json()); // parse json bodies
 app.use(
