@@ -43,6 +43,7 @@ app.use(
     cookie: {
     httpOnly: false,
     secure: process.env.NODE_ENV === 'production',
+    unset: "destroy",
     maxAge: 1000 * 60 * 60 * 24 * 7 * 2, // two weeks
     },
   })
