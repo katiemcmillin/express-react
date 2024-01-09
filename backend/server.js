@@ -42,7 +42,6 @@ app.use(
     // configure the experation of the cookie
     cookie: {
     httpOnly: false,
-    sameSite: true,
     secure: process.env.NODE_ENV === 'production',
     maxAge: 1000 * 60 * 60 * 24 * 7 * 2, // two weeks
     },
