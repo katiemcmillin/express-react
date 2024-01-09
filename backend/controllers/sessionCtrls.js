@@ -31,8 +31,9 @@ const createSession = async (req, res) => {
 
 
 //DELETE SESSION
-const deleteSession = async ({session}, res) => {
+const deleteSession = async (req, res) => {
   try {
+    console.log(req.body)
     const user = session.user;
     if (user) {
       session.destroy(err => {

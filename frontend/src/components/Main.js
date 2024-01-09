@@ -4,11 +4,12 @@ import Index from "../pages/Index";
 import Show from "../pages/Show";
 import SignUp from "../pages/SignUp";
 import SignIn from "../pages/SignIn"
+import SignOut from "../pages/SignOut"
 
 const Main = ({ setUser }) => {
   const [people, setPeople] = useState(null);
 
-  const URL = "http://localhost:4000/people";
+  const URL = "https://express-react-7vpw.onrender.com/people";
 
   //fetches all people from our API backend
   const getPeople = async () => {
@@ -65,6 +66,7 @@ const Main = ({ setUser }) => {
         />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn setUser={setUser} />} />
+        <Route path="/signout" element={<SignOut setUser={setUser} />} />
         <Route
           path="/people/:id"
           element={

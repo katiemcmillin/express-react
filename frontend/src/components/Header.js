@@ -6,8 +6,9 @@ const Header = (props) => {
       <Link to="/">
         <div>People App</div>
       </Link>
-      <Link to="/signin">SignIn</Link>
+      <Link to="/signin">LogIn</Link>
       <Link to="/signup">Signup</Link>
+      <Link to="/signout">LogOut</Link>
     </nav>
   );
 };

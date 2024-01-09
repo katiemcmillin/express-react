@@ -1,5 +1,5 @@
 export const signUp = user => (
-    fetch("http://localhost:4000/user", {
+    fetch("https://express-react-7vpw.onrender.com/user", {
       method: "POST",
       body: JSON.stringify(user),
       headers: {
@@ -8,7 +8,7 @@ export const signUp = user => (
     })
   );
   export const logIn = user => (
-    fetch("http://localhost:4000/session", {
+    fetch("https://express-react-7vpw.onrender.com/session", {
       method: "POST",
       body: JSON.stringify(user),
       headers: {
@@ -17,5 +17,5 @@ export const signUp = user => (
     })
   );
   export const logOut = () => (
-    fetch("http://localhost:4000/session", { method: "DELETE" })
+    fetch("https://express-react-7vpw.onrender.com/session", { method: "DELETE" })
   );
